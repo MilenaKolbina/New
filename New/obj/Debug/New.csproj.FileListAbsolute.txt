@@ -1,0 +1,9 @@
+C:\Users\OOP 11\New\New\bin\Debug\New.exe.config
+C:\Users\OOP 11\New\New\bin\Debug\New.exe
+C:\Users\OOP 11\New\New\bin\Debug\New.pdb
+C:\Users\OOP 11\New\New\obj\Debug\New.csprojAssemblyReference.cache
+C:\Users\OOP 11\New\New\obj\Debug\New.Form1.resources
+C:\Users\OOP 11\New\New\obj\Debug\New.Properties.Resources.resources
+C:\Users\OOP 11\New\New\obj\Debug\New.csproj.GenerateResource.cache
+C:\Users\OOP 11\New\New\obj\Debug\New.exe
+C:\Users\OOP 11\New\New\obj\Debug\New.pdb

@@ -8,7 +8,7 @@ namespace New
 {
     class ClassNew
     {
-        int[,] numbers;
+        public int[,] numbers;
 
         public ClassNew()
         {

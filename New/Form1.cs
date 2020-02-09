@@ -12,10 +12,10 @@ namespace New
 {
     public partial class Form1 : Form
     {
-        TextBox[,] matrix_vis_1;
-        TextBox[,] matrix_vis_2;
-        TextBox[,] matrix_vis_3;
-
+        static TextBox[,] matrix_vis_1;
+        static TextBox[,] matrix_vis_2;
+        static TextBox[,] matrix_vis_3;
+        ClassNew matrix1, matrix2, matrix3;
         int default_size = 5;
         public Form1()
         {
@@ -45,14 +45,78 @@ namespace New
                 { m3_30 ,m3_31 ,m3_32 ,m3_33 ,m3_34 },
                 { m3_40 ,m3_41 ,m3_42 ,m3_43 ,m3_44 }
             };
+
+            int[,] numbers2 = new int[default_size, default_size];
         }
+        
+        private static void show_numbers(TextBox[,]matrix, int[,] numbers)
+        {
+            for(int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for(int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j].Text = numbers[i, j].ToString();
+                }
+            }
+        }
+
+        
 
         private void TextBox51_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            matrix1 = new ClassNew(5, 5, 0, 10);
+            show_numbers(matrix_vis_1, matrix1.numbers);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            matrix2 = new ClassNew(5, 5, 0, 10);
+            show_numbers(matrix_vis_2, matrix2.numbers);
+        }
+
+        private static void numbers_addition( ClassNew matrix1, ClassNew matrix2, ClassNew matrix3)
+        {
+            int[,] numbers = new int[5, 5];
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    numbers[i, j]= matrix1.numbers[i, j] + matrix2.numbers[i, j];
+                }
+            }
+            show_numbers(matrix_vis_3, numbers);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            numbers_addition(matrix1, matrix2, matrix3);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int[,] numbers = new int[5, 5];
+            for (int i = 0; i < numbers.GetLength(0); i++)
+            {
+                for (int j = 0; j < numbers.GetLength(1); j++)
+                {
+                    numbers[i, j] = matrix1.numbers[i, j] - matrix2.numbers[i, j];
+                }
+            }
+            show_numbers(matrix_vis_3, numbers);
+        }
+
         private void M1_01_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
